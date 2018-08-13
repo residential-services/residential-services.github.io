@@ -1,0 +1,10 @@
+body {
+    font-family: "Avenir Next Regular";
+}
+
+.navbar-brand h5 {
+    font-family:"ITC Edwardian Script Regular";
+    font-size: 400%;
+    font-weight: normal;
+   // color: RGB(154, 139, 95);
+}
