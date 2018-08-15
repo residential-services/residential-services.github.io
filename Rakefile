@@ -13,7 +13,7 @@ namespace :local do
 
 	desc 'Build the static website'
 	task :build do
-		sh "bundle exec jekyll build  --incremental --verbose" 
+		sh "bundle exec jekyll build --source . --destination ../2.*  --incremental --verbose" 
 	end
 end
 
