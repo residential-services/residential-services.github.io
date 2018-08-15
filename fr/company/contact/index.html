@@ -3,75 +3,6 @@
 <html>
 	<head>
     
-    <script>
-        // Redirect the user to his preferred language. site.lang='en'
-        // Browser behaviour: https://gist.github.com/ksol/62b489572944ca70b4ba 
-        const siteLanguages = [];
-        
-            siteLanguages.push('en'.split('-')[0]);
-        
-            siteLanguages.push('de'.split('-')[0]);
-        
-            siteLanguages.push('fr'.split('-')[0]);
-        
-
-        var lang = null;
-        if(window.navigator.language){
-            const browserLang = window.navigator.language.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }else if(window.navigator.languages){
-            for (let i = 0; i < window.navigator.languages.length; i++) {
-                const browserLang = window.navigator.languages[i].split('-')[0];
-                for (let j = 1; j < siteLanguages.length; j++) {
-                    const siteLang = siteLanguages[j];
-                    if(siteLang === browserLang){
-                        lang = siteLang;
-                        break;
-                    }
-                }
-                if(lang)break;
-            }
-        }else if(window.navigator.userLanguage){
-            const browserLang = window.navigator.userLanguage.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }else if(window.navigator.browserLanguage){
-            const browserLang = window.navigator.browserLanguage.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }else if(window.navigator.systemLanguage){
-            const browserLang = window.navigator.systemLanguage.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }
-        if(!lang)lang=siteLanguages[0];
-
-        if(lang !== siteLanguages[0]){
-            window.location.assign("/"+lang+"/");
-        }
-    </script>
-
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -163,12 +94,12 @@
 			<div class="bg-image parallax" style="background-image: url(../../assets/images/background.jpg)">
 				<div class="page-title-lg bg-black-07 text-center">
 					<div class="container">
-						<h1 class="font-weight-light">Careers</h1>
+						<h1>Contact Classic</h1>
 						<nav aria-label="breadcrumb">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
 								<li class="breadcrumb-item"><a href="#">Pages</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Careers</li>
+								<li class="breadcrumb-item active" aria-current="page">Contact</li>
 							</ul>
 						</nav>
 					</div><!-- end container -->
@@ -176,76 +107,65 @@
 			</div>
 		</header>
 
-		<!-- Career section 1 -->
+		<!-- Contact Info section -->
 		<div class="section">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Web Developer</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<!-- Icon text box 1 -->
+					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
+						<i class="ti ti-email text-dark margin-bottom-20"></i>
+						<h6 class="heading-uppercase no-margin">Email</h6>
+						<p>contact@email.com</p>
 					</div>
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Responsibilities:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
+					<!-- Icon text box 2 -->
+					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
+						<i class="ti ti-mobile text-dark margin-bottom-20"></i>
+						<h6 class="heading-uppercase no-margin">Phone</h6>
+						<p>+(987) 654 321 01</p>
 					</div>
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Requirements:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
+					<!-- Icon text box 3 -->
+					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
+						<i class="ti ti-skype text-dark margin-bottom-20"></i>
+						<h6 class="heading-uppercase no-margin">Skype</h6>
+						<p>contact.skype</p>
 					</div>
-				</div>
-			</div>
+					<!-- Icon text box 4 -->
+					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
+						<i class="ti ti-location-pin text-dark margin-bottom-20"></i>
+						<h6 class="heading-uppercase no-margin">Address</h6>
+						<p>121 King St, Melbourne VIC 3000</p>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
 		</div>
-		<!-- ene Career section 1 -->
+		<!-- end Contact Info section -->
 
-		<!-- Career section 2 -->
-		<div class="section border-top">
+		<!-- Contact Form section -->
+		<div class="section no-padding-top">
 			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Project Manager</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<div class="contact-form">
+					<form method="post" id="contactform">
+						<div class="form-row">
+							<div class="col-12 col-sm-6">
+								<input type="text" id="name" name="name" placeholder="Name" required>
+							</div>
+							<div class="col-12 col-sm-6">
+								<input type="email" id="email" name="email" placeholder="E-Mail" required>
+							</div>
+						</div>
+						<input type="text" id="subject" name="subject" placeholder="Subject" required>
+						<textarea name="message" id="message" placeholder="Message"></textarea>
+						<button class="button button-xl button-dark" type="submit">Send Message</button>
+					</form>
+					<!-- Submit result -->
+					<div class="submit-result">
+						<span id="success">Thank you! Your Message has been sent.</span>
+						<span id="error">Something went wrong, Please try again!</span>
 					</div>
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Responsibilities:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
-					</div>
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Requirements:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+				</div><!-- end contact-form -->
+			</div><!-- end container -->
 		</div>
-		<!-- ene Career section 2 -->
-
-		<div class="bg-image parallax" style="background-image: url(../../assets/images/background.jpg)">
-			<div class="bg-white-08">
-				<div class="section-lg text-center">
-					<h2 class="font-weight-light">Send your CV via our email</h2>
-					<a class="button button-xl button-reveal-left-dark button-rounded margin-top-30" href="#"><i class="ti-email"></i><span>Get In Touch</span></a>
-				</div>
-			</div>
-		</div>
+		<!-- end Contact Form section -->
 
 
 

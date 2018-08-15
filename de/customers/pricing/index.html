@@ -3,75 +3,6 @@
 <html>
 	<head>
     
-    <script>
-        // Redirect the user to his preferred language. site.lang='en'
-        // Browser behaviour: https://gist.github.com/ksol/62b489572944ca70b4ba 
-        const siteLanguages = [];
-        
-            siteLanguages.push('en'.split('-')[0]);
-        
-            siteLanguages.push('de'.split('-')[0]);
-        
-            siteLanguages.push('fr'.split('-')[0]);
-        
-
-        var lang = null;
-        if(window.navigator.language){
-            const browserLang = window.navigator.language.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }else if(window.navigator.languages){
-            for (let i = 0; i < window.navigator.languages.length; i++) {
-                const browserLang = window.navigator.languages[i].split('-')[0];
-                for (let j = 1; j < siteLanguages.length; j++) {
-                    const siteLang = siteLanguages[j];
-                    if(siteLang === browserLang){
-                        lang = siteLang;
-                        break;
-                    }
-                }
-                if(lang)break;
-            }
-        }else if(window.navigator.userLanguage){
-            const browserLang = window.navigator.userLanguage.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }else if(window.navigator.browserLanguage){
-            const browserLang = window.navigator.browserLanguage.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }else if(window.navigator.systemLanguage){
-            const browserLang = window.navigator.systemLanguage.split('-')[0];
-            for (let j = 1; j < siteLanguages.length; j++) {
-                const siteLang = siteLanguages[j];
-                if(siteLang === browserLang){
-                    lang = siteLang;
-                    break;
-                }
-            }
-        }
-        if(!lang)lang=siteLanguages[0];
-
-        if(lang !== siteLanguages[0]){
-            window.location.assign("/"+lang+"/");
-        }
-    </script>
-
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -100,9 +31,8 @@
 
         
 
-
 		<header>
-				<!-- navbar -->
+			<!-- navbar -->
 <nav class="navbar navbar-sticky"><!-- add 'navbar-dark/navbar-grey/navbar-transparent/navbar-transparent-dark' -->
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -163,12 +93,12 @@
 			<div class="bg-image parallax" style="background-image: url(../../assets/images/background.jpg)">
 				<div class="page-title-lg bg-black-07 text-center">
 					<div class="container">
-						<h1 class="font-weight-light">Careers</h1>
+						<h1 class="font-weight-light">Prices Classic</h1>
 						<nav aria-label="breadcrumb">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
 								<li class="breadcrumb-item"><a href="#">Pages</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Careers</li>
+								<li class="breadcrumb-item active" aria-current="page">Prices</li>
 							</ul>
 						</nav>
 					</div><!-- end container -->
@@ -176,77 +106,161 @@
 			</div>
 		</header>
 
-		<!-- Career section 1 -->
-		<div class="section">
+		<!-- Features section -->
+		<div class="section-sm">
 			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Web Developer</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<div class="row services-layout-1 text-center">
+					<!-- Icon text box 1 -->
+					<div class="col-12 col-sm-4 col-lg-2 icon-3xl">
+						<i class="ti-check-box text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Feature One</h6>
 					</div>
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Responsibilities:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
+					<!-- Icon text box 2 -->
+					<div class="col-12 col-sm-4 col-lg-2 icon-3xl">
+						<i class="ti-check-box text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Feature Two</h6>
 					</div>
-					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Requirements:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
+					<!-- Icon text box 3 -->
+					<div class="col-12 col-sm-4 col-lg-2 icon-3xl">
+						<i class="ti-check-box text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Feature Three</h6>
 					</div>
-				</div>
-			</div>
+					<!-- Icon text box 4 -->
+					<div class="col-12 col-sm-4 col-lg-2 icon-3xl">
+						<i class="ti-check-box text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Feature Four</h6>
+					</div>
+					<!-- Icon text box 5 -->
+					<div class="col-12 col-sm-4 col-lg-2 icon-3xl">
+						<i class="ti-check-box text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Feature Five</h6>
+					</div>
+					<!-- Icon text box 6 -->
+					<div class="col-12 col-sm-4 col-lg-2 icon-3xl">
+						<i class="ti-check-box text-dark"></i>
+						<h6 class="heading-uppercase margin-top-20">Feature Six</h6>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
 		</div>
-		<!-- ene Career section 1 -->
+		<!-- end Features section -->
 
-		<!-- Career section 2 -->
+		<!-- Prices section -->
 		<div class="section border-top">
 			<div class="container">
+				<div class="section-title text-center">
+					<h3>Pricing Table</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Integer tincidunt.</p>
+				</div>
 				<div class="row">
+					<!-- Prices box 1 -->
 					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Project Manager</h6>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<div class="prices-box">
+							<h6 class="heading-uppercase">Personal</h6>
+							<div class="price">
+								<h1>19<span>/mo</span></h1>
+							</div>
+							<div class="price-features">
+								<ul>
+									<li>Unlimited User</li>
+									<li>Unlimited Storage</li>
+									<li>24/7 Support</li>
+								</ul>
+							</div>
+							<a class="button button-md button-dark button-rounded" href="#">Order Now</a>
+						</div>
 					</div>
+					<!-- Prices box 2 -->
 					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Responsibilities:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
+						<div class="prices-box prices-box-recommended">
+							<h6 class="heading-uppercase">Business</h6>
+							<div class="price">
+								<h1>49<span>/mo</span></h1>
+							</div>
+							<div class="price-features">
+								<ul>
+									<li>Unlimited User</li>
+									<li>Unlimited Storage</li>
+									<li>24/7 Support</li>
+								</ul>
+							</div>
+							<a class="button button-md button-dark button-rounded" href="#">Order Now</a>
+						</div>
 					</div>
+					<!-- Prices box 3 -->
 					<div class="col-12 col-lg-4">
-						<h6 class="heading-uppercase">Requirements:</h6>
-						<ul class="list-icon list-icon-check">
-							<li>First</li>
-							<li>Second</li>
-							<li>Third</li>
-							<li>Fourth</li>
-						</ul>
+						<div class="prices-box">
+							<h6 class="heading-uppercase">Premium</h6>
+							<div class="price">
+								<h1>79<span>/mo</span></h1>
+							</div>
+							<div class="price-features">
+								<ul>
+									<li>Unlimited User</li>
+									<li>Unlimited Storage</li>
+									<li>24/7 Support</li>
+								</ul>
+							</div>
+							<a class="button button-md button-dark button-rounded" href="#">Order Now</a>
+						</div>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>
+		<!-- end Prices section -->
+
+		<!-- Testimonial -->
+		<div class="section border-top">
+			<div class="container">
+				<div class="testimonial-grid column-2">
+					<!-- 1 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../../assets/images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h6 class="no-margin">Emiley Haley</h6>
+							<span class="font-small">Manager - Mono</span>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../../assets/images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h6 class="no-margin">Andrew Palmer</h6>
+							<span class="font-small">Developer - Mono</span>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../../assets/images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h6 class="no-margin">Anna Mullen</h6>
+							<span class="font-small">Designer - Mono</span>
+						</div>
+					</div>
+					<!-- 4 -->
+					<div class="testimonial-grid-box">
+						<div class="testimonial-img">
+							<img src="../../assets/images/img-circle-small.jpg" alt="">
+						</div>
+						<div class="testimonial-content">
+							<p class="margin-bottom-10 font-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<h6 class="no-margin">John Smith</h6>
+							<span class="font-small">Marketer - Mono</span>
+						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- end container -->
 		</div>
-		<!-- ene Career section 2 -->
-
-		<div class="bg-image parallax" style="background-image: url(../../assets/images/background.jpg)">
-			<div class="bg-white-08">
-				<div class="section-lg text-center">
-					<h2 class="font-weight-light">Send your CV via our email</h2>
-					<a class="button button-xl button-reveal-left-dark button-rounded margin-top-30" href="#"><i class="ti-email"></i><span>Get In Touch</span></a>
-				</div>
-			</div>
-		</div>
-
+		<!-- end Testimonial -->
 
 
 		<footer>
