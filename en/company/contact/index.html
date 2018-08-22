@@ -30,20 +30,29 @@
         
 
 
+
+
+
 		<header>
-				<!-- navbar -->
+			<!-- navbar -->
 
 
 <nav class="navbar navbar-sticky"><!-- add 'navbar-dark/navbar-grey/navbar-transparent/navbar-transparent-dark' -->
     <div class="container">
         <a class="navbar-brand" href="https://www.Equa.Residential.Services/en/">
             <h5>
-                <svg class="logo" width="210" height="70" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-  <text x="8.67%" y="66%" font-size="60.2" font-family="ITC Edwardian Script Regular" text-anchor="start" fill="rgb(154,139,95)">Equa</text>
-  <text x="41%" y="87%" font-size="9.8" font-family="Avenir Next Regular" text-anchor="start" fill="rgb(154,139,95)">RESIDENTIAL SERVICES</text>
-
+                <svg class="logo" width="210px" height="70px" viewBox="0 0 210 70">
+  <g fill="rgb(154,139,95)">
+    <text x="8.67%" y="66%" font-size="60.2" font-family="ITC Edwardian Script Regular">
+      Equa
+    </text>
+    <text x="41%" y="87%" font-size="9.8" font-family="Avenir Next Regular">
+      RESIDENTIAL SERVICES
+    </text>
+  </g>
 </svg> 
+
+
 
 
 
@@ -77,13 +86,9 @@
                     <a class="nav-link" href="#">Company info</a>
                     <ul class="dropdown-menu">
                         
-                            <li><a href="/en/company/mission/">Our Mission</a></li>
+                            <li><a href="/en/company/about/">About us</a></li>
                         
-                            <li><a href="/en/company/team/">Team</a></li>
-                        
-                            <li><a href="/en/company/timeline/">Timeline</a></li>
-                        
-                            <li><a href="/en/company/contact/">Contact us</a></li>
+                            <li><a href="/en/company/contact/">Contact</a></li>
                         
                             <li><a href="/en/company/careers/">Careers</a></li>
                         
@@ -103,23 +108,26 @@
 </nav>
 <!-- end navbar -->
 
-
 			<!-- Page header -->
-			<div class="bg-image parallax" style="background-image: url(../../assets/images/background.jpg)">
-				<div class="page-title-lg bg-black-07 text-center">
-					<div class="container">
-						<h1>Contact Classic</h1>
-						<nav aria-label="breadcrumb">
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item"><a href="#">Pages</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Contact</li>
-							</ul>
-						</nav>
-					</div><!-- end container -->
-				</div><!-- end page-title -->
-			</div>
+			<div class="bg-image parallax" style="background-image: url(/assets/my/images/1920x1200/AdobeStock_94673457-cropped-1920x1200.jpeg)">
+					<div class="page-title-lg bg-white-08 text-center">
+						<div class="container">
+							<h1 class="font-weight-light">Contact</h1>
+							
+							<nav aria-label="breadcrumb">
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="/en/">Home</a></li>
+									<li class="breadcrumb-item">Company info</li>
+									<li class="breadcrumb-item active" aria-current="page"><a href="/en/company/contact/">Contact</a></li>
+								</ul>
+							</nav>
+							
+						</div><!-- end container -->
+					</div><!-- end page-title -->
+				</div><!-- end bg-image -->
+				<!-- end Page header -->
 		</header>
+
 
 		<!-- Contact Info section -->
 		<div class="section">
@@ -129,72 +137,49 @@
 					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
 						<i class="ti ti-email text-dark margin-bottom-20"></i>
 						<h6 class="heading-uppercase no-margin">Email</h6>
-						<p>contact@email.com</p>
+						<p>
+							<a href="mailto:Info@Equa.Residential.Services">Info@Equa.Residential.Services</a>
+						</p>
 					</div>
 					<!-- Icon text box 2 -->
 					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
 						<i class="ti ti-mobile text-dark margin-bottom-20"></i>
 						<h6 class="heading-uppercase no-margin">Phone</h6>
-						<p>+(987) 654 321 01</p>
+						<p>
+							
+							<a href="tel:+41-76-681-21-96">+41 76 681 21 96</a>
+						</p>
 					</div>
-					<!-- Icon text box 3 -->
-					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
-						<i class="ti ti-skype text-dark margin-bottom-20"></i>
-						<h6 class="heading-uppercase no-margin">Skype</h6>
-						<p>contact.skype</p>
-					</div>
+					
 					<!-- Icon text box 4 -->
 					<div class="col-12 col-sm-6 col-md-3 icon-3xl">
 						<i class="ti ti-location-pin text-dark margin-bottom-20"></i>
 						<h6 class="heading-uppercase no-margin">Address</h6>
-						<p>121 King St, Melbourne VIC 3000</p>
+						<p>
+							
+								Avenue de Vaudagne 31 <br>
+							
+								CH-1217 Meyrin, Switzerland <br>
+							
+						</p>
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->
 		</div>
 		<!-- end Contact Info section -->
 
-		<!-- Contact Form section -->
-		<div class="section no-padding-top">
-			<div class="container">
-				<div class="contact-form">
-					<form method="post" id="contactform">
-						<div class="form-row">
-							<div class="col-12 col-sm-6">
-								<input type="text" id="name" name="name" placeholder="Name" required>
-							</div>
-							<div class="col-12 col-sm-6">
-								<input type="email" id="email" name="email" placeholder="E-Mail" required>
-							</div>
-						</div>
-						<input type="text" id="subject" name="subject" placeholder="Subject" required>
-						<textarea name="message" id="message" placeholder="Message"></textarea>
-						<button class="button button-xl button-dark" type="submit">Send Message</button>
-					</form>
-					<!-- Submit result -->
-					<div class="submit-result">
-						<span id="success">Thank you! Your Message has been sent.</span>
-						<span id="error">Something went wrong, Please try again!</span>
-					</div>
-				</div><!-- end contact-form -->
-			</div><!-- end container -->
-		</div>
-		<!-- end Contact Form section -->
+		
 
 
 
 		<footer>
-    <div class="footer bg-dark-lighter">
+    <div class="footer bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
                     <h3 class="margin-bottom-10">Equa</h3>
                     
-                        <p><a href="/en/">🇺🇸 English</a></p>
-                    
-                        <p><a href="/de/">🇩🇪 Deutsch</a></p>
-                    
-                        <p><a href="/fr/">🇫🇷 Français</a></p>
+                        <p><a href="/en/">🇬🇧 Website in english</a></p>
                     
                 </div>
 
@@ -230,13 +215,9 @@
                     <h6 class="heading-uppercase">Company</h6>
                     <ul class="list-dash">
                         
-                        <li><a href="/en/company/mission/">Our mission</a></li>
+                        <li><a href="/en/company/about/">About us</a></li>
                         
-                        <li><a href="/en/company/team/">Team</a></li>
-                        
-                        <li><a href="/en/company/timeline/">Timeline</a></li>
-                        
-                        <li><a href="/en/company/contact/">Contact us</a></li>
+                        <li><a href="/en/company/contact/">Contact</a></li>
                         
                         <li><a href="/en/company/careers/">Careers</a></li>
                         
@@ -254,7 +235,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end footer -->
-    <div class="footer-bottom bg-dark">
+    <div class="footer-bottom bg-light">
         <div class="container text-center">
             
             <p>&copy; 2018 Armangil Software</p>

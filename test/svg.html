@@ -27,34 +27,29 @@
 
 	<body data-preloader="2">
 
-        included svg:
-
-<svg class="logo" width="210" height="70" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-  <text x="8.67%" y="66%" font-size="60.2" font-family="ITC Edwardian Script Regular" text-anchor="start" fill="rgb(154,139,95)">Equa</text>
-  <text x="41%" y="87%" font-size="9.8" font-family="Avenir Next Regular" text-anchor="start" fill="rgb(154,139,95)">RESIDENTIAL SERVICES</text>
-
-</svg> 
-
-
-
+        <svg width='500px' height='500px' viewBox='0 0 100 100'>
+    <defs>
+        <path id='motion-path'  d='m0,0 l60,60 z' />
+    </defs>
+    <rect fill='green' x='0' y='0' width='20' height='20'>
+        <animateMotion dur='5s'>
+            <mpath xlink:href='#motion-path' />
+        </animateMotion>
+    </rect>  
+</svg>
 
 
 
 
 
 		<footer>
-    <div class="footer bg-dark-lighter">
+    <div class="footer bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
                     <h3 class="margin-bottom-10">Equa</h3>
                     
-                        <p><a href="/en/">🇺🇸 English</a></p>
-                    
-                        <p><a href="/de/">🇩🇪 Deutsch</a></p>
-                    
-                        <p><a href="/fr/">🇫🇷 Français</a></p>
+                        <p><a href="/en/">🇬🇧 Website in english</a></p>
                     
                 </div>
 
@@ -72,7 +67,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end footer -->
-    <div class="footer-bottom bg-dark">
+    <div class="footer-bottom bg-light">
         <div class="container text-center">
             
             <p>&copy; 2018 Armangil Software</p>
