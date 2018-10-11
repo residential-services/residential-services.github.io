@@ -22,18 +22,18 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDialogEmail').val(),
             $('#registrationDialogPwd').val()
         ).then(() => {
-            $('#registrationDoneDialogText').text('');
+            $('#registrationDoneDialogText').text('Um Ihre Registrierung abzuschließen, klicken Sie bitte auf den Link in der Email, die wir Ihnen gerade geschickt haben!');
             $('#registrationDoneDialogRetry').hide();
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
-            $('#registrationDoneDialogText').text(` #{err}`);
+            $('#registrationDoneDialogText').text(`Bitte versuchen Sie erneut, sich zu registrieren. Fehler war: #{err}`);
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
             $('#registrationDoneDialog').modal('show');
         });
     } else {
-        $('#registrationDoneDialogText').text('');
+        $('#registrationDoneDialogText').text('Bitte versuchen Sie erneut, sich zu registrieren. Die Passwörter müssen dasselbe sein.');
         $('#registrationDoneDialogRetry').show();
         $('#registrationDoneDialogOk').hide();
         $('#registrationDoneDialog').modal('show');
@@ -61,12 +61,12 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDialogEmail').val(),
         $('#loginDialogPwd').val()
     ).then(() => {
-        $('#loginDoneDialogText').text('');
+        $('#loginDoneDialogText').text('Erfolgreich eingeloggt!');
         $('#loginDoneDialogRetry').hide();
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(` ${err}`);
+        $('#loginDoneDialogText').text(`Bitte versuchen Sie erneut, sich einzuloggen. Fehler war: ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');

@@ -61,12 +61,12 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDialogEmail').val(),
         $('#loginDialogPwd').val()
     ).then(() => {
-        $('#loginDoneDialogText').text('');
+        $('#loginDoneDialogText').text('Vous êtes connecté à votre compte Equa!');
         $('#loginDoneDialogRetry').hide();
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(` ${err}`);
+        $('#loginDoneDialogText').text(`Assayer de vous connecter encore une fois. L'erreur était: ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');
