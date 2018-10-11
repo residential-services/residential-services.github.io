@@ -27,7 +27,7 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
-            $('#registrationDoneDialogText').text('Please retry registering. Error was:'+` #{err}`);
+            $('#registrationDoneDialogText').text(`Please retry registering. Error was: #{err}`);
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
             $('#registrationDoneDialog').modal('show');
@@ -66,7 +66,7 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text('Please retry signing in. Error was:' +` ${err}`);
+        $('#loginDoneDialogText').text(`Please retry signing in. Error was: ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');
