@@ -22,18 +22,18 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDialogEmail').val(),
             $('#registrationDialogPwd').val()
         ).then(() => {
-            $('#registrationDoneDialogText').text('Done! To complete your registration, please click on the link in the email we have just sent you!');
+            $('#registrationDoneDialogText').text('');
             $('#registrationDoneDialogRetry').hide();
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
-            $('#registrationDoneDialogText').text(`Please retry registering. Error was: #{err}`);
+            $('#registrationDoneDialogText').text(` #{err}`);
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
             $('#registrationDoneDialog').modal('show');
         });
     } else {
-        $('#registrationDoneDialogText').text('Please retry registering. The two passwords must be the same.');
+        $('#registrationDoneDialogText').text('');
         $('#registrationDoneDialogRetry').show();
         $('#registrationDoneDialogOk').hide();
         $('#registrationDoneDialog').modal('show');
@@ -61,12 +61,12 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDialogEmail').val(),
         $('#loginDialogPwd').val()
     ).then(() => {
-        $('#loginDoneDialogText').text('Successfully signed in!');
+        $('#loginDoneDialogText').text('');
         $('#loginDoneDialogRetry').hide();
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(`Please retry signing in. Error was: ${err}`);
+        $('#loginDoneDialogText').text(` ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');
