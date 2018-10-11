@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // TODO: Handle email confirmation link. See https://docs.mongodb.com/stitch/authentication/userpass/index.html#create-a-new-user-account
 
 // TODO: Handle Password reset link. See https://docs.mongodb.com/stitch/authentication/userpass/index.html#reset-a-user-s-password
@@ -61,7 +66,7 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(`Please retry signing in. Error was: ${err}`);
+        $('#loginDoneDialogText').text('Please retry signing in. Error was:' +` ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');

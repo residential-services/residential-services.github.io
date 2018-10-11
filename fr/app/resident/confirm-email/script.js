@@ -1,5 +1,9 @@
 
 
+
+
+
+
 $( "#dialogOk" ).on( "click", () => {
     window.location.assign('../home/?action=sign-in');
 });
@@ -12,7 +16,7 @@ my.stitch.account.confirmEmail(
     //$('#dialogOk').show();
     $('#dialog').modal('show');
 }).catch(err => {
-    $('#dialogText').text(`Email unconfirmed. Error was: ${err}`);
+    $('#dialogText').text('Email unconfirmed. Error was:'+ ` ${err}`);
     //$('#dialogOk').show();
     $('#dialog').modal('show');
 });
