@@ -98,7 +98,12 @@ if (!my.stitch.client.auth.user) {
     if (my.vars.query.action === 'sign-in') {
         $('#loginDialog').modal('show');
     }else{
-        $('#registrationDialog').modal('show');
+        $('#registrationDialog').modal({
+            backdrop: false,
+            keyboard: true,
+            focus: true,
+            show: true
+        });
     }
 
 } else {
