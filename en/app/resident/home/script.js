@@ -28,7 +28,7 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDialogEmail').val(),
             $('#registrationDialogPwd').val()
         ).then(() => {
-            $('#registrationDoneDialogText').text('Done! To complete your registration, please click on the link in the email we have just sent you!');
+            $('#registrationDoneDialogText').text('To complete your registration, please click on the link in the email we have just sent you!');
             $('#registrationDoneDialogRetry').hide();
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
