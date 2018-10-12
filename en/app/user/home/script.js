@@ -33,7 +33,7 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
-            $('#registrationDoneDialogText').text(`Please retry registering. Error was: #{err}`);
+            $('#registrationDoneDialogText').text(`Please retry registering. Error was: ${err}`);
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
             $('#registrationDoneDialog').modal('show');
