@@ -16,7 +16,9 @@
 
 // 𝟏 Registration events
 $( "#registrationDialogRegister" ).on( "click", function() {
-    $('#registrationDialog').modal('hide');
+    $('#registrationDialog').modal({
+        show: false
+    });
     if ($('#registrationDialogPwd').val() ===  $('#registrationDialogPwd2').val()) {
         my.stitch.account.register(
             $('#registrationDialogEmail').val(),
@@ -25,23 +27,45 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDoneDialogText').text('Done! To complete your registration, please click on the link in the email we have just sent you!');
             $('#registrationDoneDialogRetry').hide();
             $('#registrationDoneDialogOk').show();
-            $('#registrationDoneDialog').modal('show');
+            $('#registrationDoneDialog').modal({
+                backdrop: false,
+                keyboard: true,
+                focus: true,
+                show: true
+            });
         }).catch(err => {
             $('#registrationDoneDialogText').text(`Please retry registering. Error was: #{err}`);
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
-            $('#registrationDoneDialog').modal('show');
+            $('#registrationDoneDialog').modal({
+                backdrop: false,
+                keyboard: true,
+                focus: true,
+                show: true
+            });
         });
     } else {
         $('#registrationDoneDialogText').text('Please retry registering. The two passwords must be the same.');
         $('#registrationDoneDialogRetry').show();
         $('#registrationDoneDialogOk').hide();
-        $('#registrationDoneDialog').modal('show');
+        $('#registrationDoneDialog').modal({
+            backdrop: false,
+            keyboard: true,
+            focus: true,
+            show: true
+        });
     }
 });
 $( "#registrationDialogLogin" ).on( "click", function() {
-    $('#registrationDialog').modal('hide');
-    $('#loginDialog').modal('show');
+    $('#registrationDialog').modal({
+        show: false
+    });
+    $('#loginDialog').modal({
+        backdrop: false,
+        keyboard: true,
+        focus: true,
+        show: true
+    });
 });
 
 
