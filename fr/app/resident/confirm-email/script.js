@@ -3,7 +3,12 @@
 
 
 
-
+$('#dialog').modal({
+    backdrop: false,
+    keyboard: true,
+    focus: true,
+    show: false
+});
 $( "#dialogOk" ).on( "click", () => {
     window.location.assign('../home/?action=sign-in');
 });
@@ -14,19 +19,9 @@ my.stitch.account.confirmEmail(
 ).then(() => {
     $('#dialogText').text('Email confirmé!');
     $('#dialogOk').show();
-    $('#dialog').modal({
-        backdrop: false,
-        keyboard: true,
-        focus: true,
-        show: true
-    });
+    $('#dialog').modal('show');
 }).catch(err => {
     $('#dialogText').text(`Email non confirmé. L'erreur était: ${err}`);
     $('#dialogOk').hide();
-    $('#dialog').modal({
-        backdrop: false,
-        keyboard: true,
-        focus: true,
-        show: true
-    });
+    $('#dialog').modal('show');
 });
