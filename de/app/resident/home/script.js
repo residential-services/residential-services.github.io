@@ -47,16 +47,25 @@ $( "#registrationDialogLogin" ).on( "click", function() {
 
 // 𝟐 After registration events
 $( "#registrationDoneDialogRetry" ).on( "click", function() {
-    $('#registrationDoneDialog').modal('hide');
+    $('#registrationDoneDialog').modal({
+        show: false
+    });
     $('#registrationDialogEmail').val('');
     $('#registrationDialogPwd').val('');
-    $('#registrationDialog').modal('show');
+    $('#registrationDialog').modal({
+        backdrop: false,
+        keyboard: true,
+        focus: true,
+        show: true
+    });
 });    
 
 
 // 𝟑 Login events
 $( "#loginDialogLogin" ).on( "click", function() {
-    $('#loginDialog').modal('hide');
+    $('#loginDialog').modal({
+        show: false
+    });
     my.stitch.account.signIn(
         $('#loginDialogEmail').val(),
         $('#loginDialogPwd').val()
@@ -73,17 +82,31 @@ $( "#loginDialogLogin" ).on( "click", function() {
     });
 });
 $( "#loginDialogRegister" ).on( "click", function() {
-    $('#loginDialog').modal('hide');
-    $('#registrationDialog').modal('show');
+    $('#loginDialog').modal({
+        show: false
+    });
+    $('#registrationDialog').modal({
+        backdrop: false,
+        keyboard: true,
+        focus: true,
+        show: true
+    });
 });
 
 
 // 𝟒 After login events
 $( "#loginDoneDialogRetry" ).on( "click", function() {
-    $('#loginDoneDialog').modal('hide');
+    $('#loginDoneDialog').modal({
+        show: false
+    });
     $('#loginDialogEmail').val('');
     $('#loginDialogPwd').val('');
-    $('#loginDialog').modal('show');
+    $('#loginDialog').modal({
+        backdrop: false,
+        keyboard: true,
+        focus: true,
+        show: true
+    });
 });    
 
 
