@@ -33,7 +33,11 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
-            $('#registrationDoneDialogText').text(`Bitte versuchen Sie erneut, sich zu registrieren. Fehler war: ${err}`);
+            if (`${err}`.match(/password/i)) {
+                $('#registrationDoneDialogText').text(`Bitte versuchen Sie erneut, sich zu registrieren. Passwort muss zwischen 6 und 128 Zeichen lang sein.`);
+            } else {
+                $('#registrationDoneDialogText').text(`Bitte versuchen Sie erneut, sich zu registrieren. Email schon vergeben.`);                
+            }
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
             $('#registrationDoneDialog').modal('show');
@@ -84,7 +88,7 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(`Bitte versuchen Sie erneut, sich einzuloggen. Fehler war: ${err}`);
+        $('#loginDoneDialogText').text(`Bitte versuchen Sie erneut, sich einzuloggen. Email und/oder Passwort unbekannt. ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');

@@ -33,7 +33,11 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDoneDialogOk').show();
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
-            $('#registrationDoneDialogText').text(` ${err}`);
+            if (`${err}`.match(/password/i)) {
+                $('#registrationDoneDialogText').text(` `);
+            } else {
+                $('#registrationDoneDialogText').text(` `);                
+            }
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
             $('#registrationDoneDialog').modal('show');
@@ -84,7 +88,7 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(`Assayer de vous connecter encore une fois. L'erreur était: ${err}`);
+        $('#loginDoneDialogText').text(`Assayer de vous connecter encore une fois. Email et/ou mot de passe inconnu. ${err}`);
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');

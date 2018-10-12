@@ -21,7 +21,7 @@ my.stitch.account.confirmEmail(
     $('#dialogOk').show();
     $('#dialog').modal('show');
 }).catch(err => {
-    $('#dialogText').text(`Email non confirmé. L'erreur était: ${err}`);
+    $('#dialogText').text('Email non confirmé.');
     $('#dialogOk').hide();
     $('#dialog').modal('show');
 });

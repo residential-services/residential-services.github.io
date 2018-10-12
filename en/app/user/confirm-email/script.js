@@ -17,11 +17,11 @@ my.stitch.account.confirmEmail(
     my.vars.query.token,
     my.vars.query.tokenId 
 ).then(() => {
-    $('#dialogText').text('Email confirmed !');
+    $('#dialogText').text('Email confirmed!');
     $('#dialogOk').show();
     $('#dialog').modal('show');
 }).catch(err => {
-    $('#dialogText').text(`Email unconfirmed. Error was: ${err}`);
+    $('#dialogText').text('Email unconfirmed.');
     $('#dialogOk').hide();
     $('#dialog').modal('show');
 });
