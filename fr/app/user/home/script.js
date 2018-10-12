@@ -34,9 +34,9 @@ $( "#registrationDialogRegister" ).on( "click", function() {
             $('#registrationDoneDialog').modal('show');
         }).catch(err => {
             if (`${err}`.match(/password/i)) {
-                $('#registrationDoneDialogText').text(` `);
+                $('#registrationDoneDialogText').text(' ');
             } else {
-                $('#registrationDoneDialogText').text(` `);                
+                $('#registrationDoneDialogText').text(' ');                
             }
             $('#registrationDoneDialogRetry').show();
             $('#registrationDoneDialogOk').hide();
@@ -88,7 +88,7 @@ $( "#loginDialogLogin" ).on( "click", function() {
         $('#loginDoneDialogOk').show();
         $('#loginDoneDialog').modal('show');
     }).catch(err => {
-        $('#loginDoneDialogText').text(`Assayer de vous connecter encore une fois. Email et/ou mot de passe inconnu. ${err}`);
+        $('#loginDoneDialogText').text('Assayer de vous connecter encore une fois. Email et/ou mot de passe inconnu.');
         $('#loginDoneDialogRetry').show();
         $('#loginDoneDialogOk').hide();
         $('#loginDoneDialog').modal('show');
